@@ -4,6 +4,11 @@ namespace Inheritance.Pieces.Legs
 {
     class Skirt : LegBase, IMoveable
     {
+        public Skirt(string material)
+        {
+            Material = material;
+        }
+
         public string Material { get; set; }
         public Length Length { get; set; }
         int _howFarIMoved;
