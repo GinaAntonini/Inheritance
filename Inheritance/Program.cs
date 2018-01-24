@@ -56,7 +56,7 @@ namespace Inheritance
                 Length = Length.StreetCorner
             };
 
-            var legs = new List<LegBase>
+            var movers = new List<IMoveable>
             {
                 shorts,
                 skirt,
@@ -68,18 +68,33 @@ namespace Inheritance
 
             skirt1.Walk(15);
 
-            foreach (var leg in legs)
+            //loops over legs 
+            foreach (var mover in movers)
             {
-                leg.Walk(10);
+                mover.Walk(10);
+                mover.Jump(10);
+                mover.Run(10);
 
-                if (leg is Skirt s)
+                //take leg, is a skirt, if it's a skirt, put skirt in the variable s'
+                switch (mover)
                 {
-                    s.Material = "jeans";
+                    case Skirt s:
+                        Console.WriteLine($"It's a skirt made of {s.Material}");
+                        break;
+                    case Jeans j:
+                        Console.WriteLine($"It's {j.Color} jeans");
+                        j.HowFarIMoved = 2000;
+                        break;
+                    case IMoveable m:
+                        m.Run(10);
+                        break;
                 }
+
+                Console.WriteLine($"The {mover.GetType().Name} moved {mover.HowFarIMoved} units.");
 
             }
 
-            Console.ReadLine();
+                Console.ReadLine();
         }
     }
 }
