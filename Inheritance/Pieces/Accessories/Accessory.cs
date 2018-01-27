@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Inheritance.Pieces.Accessories
 {
-    class Accessory
+    class AccessoryBase
     {
+        public abstract AccessoryLocation Location { get; set; }
     }
+
+        enum AccessoryLocation
+        {
+            Hand = 1,
+            Torso
+        }
 }

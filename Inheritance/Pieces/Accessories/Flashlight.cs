@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Inheritance.Pieces.Accessories
 {
-    class Flashlight
+    class Flashlight : AccessoryBase 
     {
+        public override AccessoryLocation Location => AccessoryLocation.Hand;
     }
 }

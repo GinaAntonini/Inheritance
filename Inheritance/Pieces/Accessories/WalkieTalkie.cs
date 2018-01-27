@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Inheritance.Pieces.Accessories
 {
-    class WalkieTalkie
+    class WalkieTalkie : AccessoryBase 
     {
+        public override AccessoryLocation Location => AccessoryLocation.Hand;
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Inheritance.Pieces.Accessories
 {
-    class BackPack
+    class Backpack : AccessoryBase
     {
+        public override AccessoryLocation Location => AccessoryLocation.Torso;
     }
 }

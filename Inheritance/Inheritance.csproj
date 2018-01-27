@@ -43,6 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Minifigure.cs" />
+    <Compile Include="Pieces\Accessories\Accessory.cs" />
+    <Compile Include="Pieces\Accessories\BackPack.cs" />
+    <Compile Include="Pieces\Accessories\Cocktail..cs" />
+    <Compile Include="Pieces\Accessories\Flashlight.cs" />
+    <Compile Include="Pieces\Accessories\Purse.cs" />
+    <Compile Include="Pieces\Accessories\WalkieTalkie.cs" />
     <Compile Include="Pieces\Heads\Emmet.cs" />
     <Compile Include="Pieces\Heads\Hair.cs" />
     <Compile Include="Pieces\Heads\HeadGear.cs" />
